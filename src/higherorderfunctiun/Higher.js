@@ -1,19 +1,19 @@
 import React, {useState} from 'react'
 
 const Higher = (Wrapcompo) => {
-    function Myhoc(){
+    function myop(){
         const [Value, setValue] = useState(0);
-        const handlesubmit=()=>{
+        const submiting=()=>{
             setValue(Value+1)
         }
         return (
             <div>
-                <Wrapcompo Value={Value} submit={handlesubmit}/>
+                <Wrapcompo Value={Value} submit={submiting}/>
             </div>
         )
 
     }
-    return Myhoc
+    return myop
 
 }
 
